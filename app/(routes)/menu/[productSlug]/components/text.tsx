@@ -10,7 +10,7 @@ const InfoProduct = ({ product }: { product: Producto }) => {
     return <p>Producto no encontrado</p>; // Manejo de caso en que el producto no se encuentra
   }
 
-  const phoneNumber = "51930134408"; // Cambia esto por el número correcto
+  const phoneNumber = "51918237837"; // Cambia esto por el número correcto
   // Función para manejar el clic del botón
   const handleBuyClick = () => {
     const message = `Hola, estoy interesado en comprar ${product.nombre} por ${formatPrice(product.precio)}.`;
@@ -25,6 +25,11 @@ const InfoProduct = ({ product }: { product: Producto }) => {
       </div>
       <Separator className="my-4" />
       <p>{product.descripcion}</p>
+      <br />
+      <p className="font-bold">
+        
+      Delivery solo toda la zona del aeropuerto de huamanga
+      </p>
       <Separator className="my-4" />
       <p className="my-4 text-2xl">{formatPrice(product.precio)}</p>
       <div className="flex items-center gap-5">

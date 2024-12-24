@@ -1,4 +1,5 @@
-"use client"
+"use client";
+
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import Preload from "@/components/preload";
@@ -11,8 +12,6 @@ import { useEffect, useState } from "react";
 import "./globals.css";
 
 const urbanist = Urbanist({ subsets: ["latin"] });
-
-// No incluir aquí la exportación de metadata
 
 export default function RootLayout({
   children,
@@ -34,6 +33,12 @@ export default function RootLayout({
       <head>
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Restaurante LUROMY | Menus en Huamanga y Aeropuerto Ayacucho</title>
+        <meta
+          name="description"
+          content="Restaurante LUROMY ofrece las mejores  menús en Huamanga, Ayacucho. Visítanos cerca del Aeropuerto Nacional Alfredo Mendívil Duarte."
+        />
+        <meta name="keywords" content="Restaurante LUROMY, Huamanga, Ayacucho, menus, Aeropuerto Nacional Alfredo Mendívil Duarte" />
         <link rel="icon" href="/favicon.ico" />
 
         <script
@@ -41,17 +46,28 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Organization",
-              name: "Restaurante LUROMY | Hamburguesas y Más",
+              "@type": "Restaurant",
+              name: "Restaurante LUROMY | Menus",
               url: "https://luromy.vercel.app/",
               logo: "https://luromy.vercel.app/favicon.ico",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "Aeropuerto Nacional Alfredo Mendívil Duarte",
+                addressLocality: "Huamanga",
+                addressRegion: "Ayacucho",
+                postalCode: "05000",
+                addressCountry: "PE",
+              },
               contactPoint: {
                 "@type": "ContactPoint",
-                telephone: "+51 930 134 408",
+                telephone: "+51 918 237 837",
                 contactType: "Customer Service",
               },
               sameAs: [
-                "https://wa.me/51930134408",
+                "https://wa.me/51918237837",
+                "https://www.facebook.com/tu-pagina",
+                "https://www.instagram.com/tu-pagina",
+                "https://twitter.com/tu-pagina"
               ],
             }),
           }}
@@ -60,7 +76,7 @@ export default function RootLayout({
       <body className={urbanist.className}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >

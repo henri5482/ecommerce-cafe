@@ -7,11 +7,12 @@ const ItemsMenuMobile = () => {
     <Popover>
       <PopoverTrigger
         aria-label="Open menu"  // Agregado para accesibilidad
-        className="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700"  // Estilos adicionales
+        className="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700"
+          // Estilos adicionales
       >
         <Menu size={24} />
       </PopoverTrigger>
-      <PopoverContent className="w-48 bg-white dark:bg-gray-800 shadow-lg rounded-md p-4">
+      <PopoverContent className="w-56 bg-white dark:bg-gray-800 shadow-lg rounded-md p-4 max-sm:w-full">
       <Link href="/" className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md">
         Inicio
         </Link>
@@ -19,14 +20,14 @@ const ItemsMenuMobile = () => {
         Menu
         </Link>
         <Link href="/about" className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md">
-        Nosotros
+        Servicios
         </Link>
-        <Link href="/gallery" className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md">
+        {/* <Link href="/gallery" className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md">
         Galeria
         </Link>
         <Link href="/delivery" className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md">
           Delivery
-        </Link>
+        </Link> */}
         <Link href="https://maps.app.goo.gl/r2azEc8ZCEoNHAbcA" legacyBehavior passHref>
       <a className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md" target="_blank" rel="noopener noreferrer">
         Local

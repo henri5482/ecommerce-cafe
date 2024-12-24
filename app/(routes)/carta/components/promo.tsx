@@ -15,24 +15,24 @@ const Promo = () => {
   const Promos = [
     {
       image: "promo1.webp",
-      title: "Delicious Desserts",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+      title: "¡Combo Broaster! Pollo Crocante + Gaseosa Personal",
+      description: "",
     },
-    {
-      image: "promo2.webp",
-      title: "Delicious Desserts",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
-    },
-    {
-      image: "promo3.webp",
-      title: "Delicious Desserts",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
-    },
-    {
-      image: "promo4.webp",
-      title: "Fantastic Atmosphere",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
-    },
+    // {
+    //   image: "promo2.webp",
+    //   title: "Delicious Desserts",
+    //   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+    // },
+    // {
+    //   image: "promo3.webp",
+    //   title: "Delicious Desserts",
+    //   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+    // },
+    // {
+    //   image: "promo4.webp",
+    //   title: "Fantastic Atmosphere",
+    //   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+    // },
   ];
 
   return (
@@ -66,9 +66,10 @@ const Promo = () => {
                   </p>
                   <div className="flex flex-col md:flex-row lg:justify-start justify-between items-center bebas-neue-regular">
                     <Link
-                      href="/allproducts"
+                      href="https://wa.me/51918237837?text=quiero%20la%20promo%20broaster"
                       className="mt-6 text-lg md:text-xl px-8 py-3 flex justify-center items-center bg-slate-800 text-white rounded-lg shadow-lg hover:bg-yellow-600 transition duration-300"
                       aria-label="Comprar ahora"
+                      target="_blank"
                     >
                       Pedir Promocion
                     </Link>
@@ -76,7 +77,7 @@ const Promo = () => {
                       <span>
                         <Phone size={45} className="px-2" />
                       </span>
-                      930134000
+                      918237837
                     </h1>
                   </div>
                 </div>

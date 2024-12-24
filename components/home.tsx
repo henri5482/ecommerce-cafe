@@ -11,12 +11,12 @@ const HomeBanner: React.FC = () => {
     {
       name: "RESTAURANTE",
       description: "LUROMY",
-      imageUrl: "/ayacucho.webp",
+      imageUrl: "/fondohome02.webp",
     },
     {
       name: "CAFETERÍA",
       description: "LUROMY",
-      imageUrl: "/fondohome.webp", // Cambié la segunda imagen para la demostración
+      imageUrl: "/home05.webp", // Cambié la segunda imagen para la demostración
     },
   ];
 
@@ -37,7 +37,9 @@ const HomeBanner: React.FC = () => {
               <motion.div
                 key={index}
                 className="absolute w-full h-full bg-cover bg-center"
-                style={{ backgroundImage: `url(${item.imageUrl})` }}
+                style={{ backgroundImage: `url(${item.imageUrl})`,
+                  
+                 }}
                 initial={{ opacity: 0, scale: 1.05 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 1.05 }}
@@ -100,15 +102,16 @@ const HomeBanner: React.FC = () => {
                       >
                         <div className="flex justify-center items-center gap-4 max-sm:flex-col">
                           <Link
-                            href="#"
+                            href="/menucarta.webp"
                             className=" text-lg md:text-xl px-8 py-3 flex justify-center items-center bg-slate-800 text-white rounded-lg shadow-lg hover:bg-yellow-600 transition duration-300"
                             aria-label="Comprar ahora"
+                            target="_blank"
                           >
                             NUESTRA CARTA{" "}
                             <MoveRight className="px-1" size={30} />
                           </Link>
                           <Link
-                            href="https://www.google.com/maps/place/13%C2%B009'07.7%22S+74%C2%B012'25.9%22W/@-13.152139,-74.207204,884m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d-13.152139!4d-74.207204?entry=ttu"
+                            href="https://maps.app.goo.gl/y6eZhDMSE76N4nKr8"
                             className=" text-lg md:text-xl px-8 py-3 flex justify-center items-center bg-slate-800 text-white rounded-lg shadow-lg hover:bg-yellow-600 transition duration-300"
                             aria-label="Comprar ahora"
                             target="_blank"

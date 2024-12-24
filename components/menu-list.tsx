@@ -20,8 +20,8 @@ const MenuList: React.FC<MenuListProps> = ({ isScrolled }) => {
             <NavigationMenuLink
               className={
                 isScrolled
-                  ? "text-slate-900 hover:text-orange-400"
-                  : "text-slate-800 hover:text-orange-400"
+                  ? "text-black hover:text-orange-400"
+                  : "text-white hover:text-orange-400"
               }
             >
               Incio
@@ -33,8 +33,8 @@ const MenuList: React.FC<MenuListProps> = ({ isScrolled }) => {
             <NavigationMenuLink
               className={
                 isScrolled
-                  ? "text-slate-900 hover:text-orange-400"
-                  : "text-slate-800 hover:text-orange-400"
+                  ? "text-black hover:text-orange-400"
+                  : "text-white hover:text-orange-400"
               }
             >
               Menu
@@ -46,48 +46,48 @@ const MenuList: React.FC<MenuListProps> = ({ isScrolled }) => {
           <NavigationMenuLink
               className={
                 isScrolled
-                  ? "text-slate-900 hover:text-orange-400"
-                  : "text-slate-800 hover:text-orange-400"
+                  ? "text-black hover:text-orange-400"
+                  : "text-white hover:text-orange-400"
               }
             >
               {" "}
-              Nosotros
+              Servicios
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
-        <NavigationMenuItem>
+        {/* <NavigationMenuItem>
           <Link href="/gallery" legacyBehavior passHref>
           <NavigationMenuLink
               className={
                 isScrolled
-                  ? "text-slate-900 hover:text-orange-400"
-                  : "text-slate-800 hover:text-orange-400"
+                  ? "text-black hover:text-orange-400"
+                  : "text-white hover:text-orange-400"
               }
             >
               Galeria
             </NavigationMenuLink>
           </Link>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
+        </NavigationMenuItem> */}
+        {/* <NavigationMenuItem>
           <Link href="/delivery" legacyBehavior passHref>
           <NavigationMenuLink
               className={
                 isScrolled
-                  ? "text-slate-900 hover:text-orange-400"
-                  : "text-slate-800 hover:text-orange-400"
+                  ? "text-black hover:text-orange-400"
+                  : "text-white hover:text-orange-400"
               }
             >
               Delivery
             </NavigationMenuLink>
           </Link>
-        </NavigationMenuItem>
+        </NavigationMenuItem> */}
         <NavigationMenuItem>
-          <Link href="https://maps.app.goo.gl/r2azEc8ZCEoNHAbcA" legacyBehavior passHref >
+          <Link href="https://maps.app.goo.gl/GtfY3E8e158Frjmg9" legacyBehavior passHref >
           <NavigationMenuLink target="_blank"
               className={
                 isScrolled
-                  ? "text-slate-900 hover:text-orange-400"
-                  : "text-slate-800 hover:text-orange-400"
+                  ? "text-black hover:text-orange-400"
+                  : "text-white hover:text-orange-400"
               }
             >
               Local

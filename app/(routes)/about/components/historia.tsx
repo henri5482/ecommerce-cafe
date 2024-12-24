@@ -11,7 +11,7 @@ const Historia = () => {
           alt="Imagen grande"
           width={1700}
           height={800}
-          className=""
+          className="rounded-lg"
         />
       </div>
       <div className="flex px-4 flex-col items-center text-center md:items-start md:text-start lg:px-24">
@@ -26,15 +26,14 @@ const Historia = () => {
           Visita Nuestro Restaurante
         </h1>
         <p className="text-base text-start max-md:text-center  text-gray-600 mb-6">
-          Disfruta en nuestro restaurante con platos llenos de sabor y calidad.
-          Ingredientes frescos en un ambiente acogedor. ¡Visítanos en [Dirección
-          del Restaurante] y sorpréndete con lo mejor de la cocina!
+          Ven y visita nuestro restaurante Luromy, un lugar donde podrás disfrutar comida de casa y casera y poder comer como en casa !visitanos en avenida ejercito calle lince 124
         </p>
         <div className="flex flex-col md:flex-row lg:justify-start justify-between items-center bebas-neue-regular">
           <Link
-            href="/allproducts"
+            href="https://maps.app.goo.gl/GtfY3E8e158Frjmg9"
             className="mt-6 text-lg md:text-xl px-8 py-3 flex justify-center items-center bg-slate-800 text-white rounded-lg shadow-lg hover:bg-yellow-600 transition duration-300"
             aria-label="Comprar ahora"
+            target="_blank"
           >
             NUESTRO Restaurante
           </Link>
@@ -42,7 +41,7 @@ const Historia = () => {
             <span>
               <Phone size={45} className="px-2" />
             </span>
-            930134000
+            918237837
           </h1>
         </div>
       </div>

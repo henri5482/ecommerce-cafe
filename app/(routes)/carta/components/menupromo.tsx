@@ -1,7 +1,7 @@
 "use client";
 
 import { data, MenuData, Producto } from "@/data/menuData";
-import { Coffee, IceCreamBowl } from "lucide-react";
+import { Coffee } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -11,7 +11,7 @@ import { TbSoup } from "react-icons/tb";
 
 const Menu = () => {
   const [selectedCategory, setSelectedCategory] =
-    useState<keyof MenuData>("bebidas");
+    useState<keyof MenuData>("menu");
 
   const handleCategoryClick = (category: keyof MenuData) => {
     setSelectedCategory(category);
@@ -19,15 +19,13 @@ const Menu = () => {
 
   return (
     <>
-      <div
-        className=" xl:px-40 2xl:px-56 dark:bg-slate-50 bg-cover bg-center relative items-center py-28 inset-0 bg-slate-100 bg-opacity-50"
-      >
+      <div className=" xl:px-40 2xl:px-56 dark:bg-slate-50 bg-cover bg-center relative items-center py-28 inset-0  bg-opacity-50">
         <div className="flex flex-col items-center px-2">
           <p className="text-[20px] font-semibold text-orange-600 py-4">
-          - Luromy -
+            - Luromy -
           </p>
           <h1 className="text-5xl md:text-7xl font-bold mb-4 bebas-neue-regular text-slate-800">
-             Nuestra Carta
+            Nuestra Carta
           </h1>
           <div className="flex flex-wrap justify-center space-x-4 mb-8 gap-4 md:gap-16 py-8 text-[14px] items-center">
             <button
@@ -38,25 +36,11 @@ const Menu = () => {
                   : "hover:scale-110 hover:text-orange-300"
               }`}
             >
-              <TbSoup
+              <MdRestaurantMenu
                 size={40}
                 className="transition-transform duration-300 hover:scale-125"
               />
-              <p className="mt-2">carta</p>
-            </button>
-            <button
-              onClick={() => handleCategoryClick("productos")}
-              className={`cursor-pointer flex flex-col items-center transition-transform transform ${
-                selectedCategory === "productos"
-                  ? "scale-110 text-orange-300"
-                  : "hover:scale-110 hover:text-orange-300"
-              }`}
-            >
-              <RiDrinksLine
-                size={40}
-                className="transition-transform duration-300 hover:scale-125"
-              />
-              <p className="mt-2">jugos</p>
+              <p className="mt-2">Carta</p>
             </button>
             <button
               onClick={() => handleCategoryClick("jugos")}
@@ -66,26 +50,26 @@ const Menu = () => {
                   : "hover:scale-110 hover:text-orange-300"
               }`}
             >
+              <RiDrinksLine
+                size={40}
+                className="transition-transform duration-300 hover:scale-125"
+              />
+              <p className="mt-2">Jugos</p>
+            </button>
+            {/* <button
+              onClick={() => handleCategoryClick("productos")}
+              className={`cursor-pointer flex flex-col items-center transition-transform transform ${
+                selectedCategory === "productos"
+                  ? "scale-110 text-orange-300"
+                  : "hover:scale-110 hover:text-orange-300"
+              }`}
+            >
               <IceCreamBowl
                 size={40}
                 className="transition-transform duration-300 hover:scale-125"
               />
               <p className="mt-2">helados</p>
-            </button>
-            <button
-              onClick={() => handleCategoryClick("postres")}
-              className={`cursor-pointer flex flex-col items-center transition-transform transform ${
-                selectedCategory === "postres"
-                  ? "scale-110 text-orange-300"
-                  : "hover:scale-110 hover:text-orange-300"
-              }`}
-            >
-              <Coffee
-                size={40}
-                className="transition-transform duration-300 hover:scale-125"
-              />
-              <p className="mt-2">cafe</p>
-            </button>
+            </button> */}
             <button
               onClick={() => handleCategoryClick("bebidas")}
               className={`cursor-pointer flex flex-col items-center transition-transform transform ${
@@ -94,11 +78,25 @@ const Menu = () => {
                   : "hover:scale-110 hover:text-orange-300"
               }`}
             >
-              <MdRestaurantMenu
+              <Coffee
                 size={40}
                 className="transition-transform duration-300 hover:scale-125"
               />
-              <p className="mt-2">menu</p>
+              <p className="mt-2">Bebidas</p>
+            </button>
+            <button
+              onClick={() => handleCategoryClick("desayunos")}
+              className={`cursor-pointer flex flex-col items-center transition-transform transform ${
+                selectedCategory === "desayunos"
+                  ? "scale-110 text-orange-300"
+                  : "hover:scale-110 hover:text-orange-300"
+              }`}
+            >
+              <TbSoup
+                size={40}
+                className="transition-transform duration-300 hover:scale-125"
+              />
+              <p className="mt-2">Desayunos</p>
             </button>
           </div>
         </div>
@@ -110,8 +108,9 @@ const Menu = () => {
                   <figure className="flex-shrink-0">
                     <Image
                       src={item.imagen}
-                      width={100}
-                      height={100}
+                      width={150}
+                      height={150}
+                      quality={85}
                       loading="lazy"
                       alt={item.nombre}
                       className="w-28 h-28 object-cover rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-110"
@@ -128,7 +127,9 @@ const Menu = () => {
                         S/{item.precio.toFixed(2)}
                       </p>
                     </div>
-                    <p className="text-sm text-gray-700 schibsted-grotesk font-semibold">{item.descripcion}</p>
+                    <p className="text-sm text-gray-700 schibsted-grotesk font-semibold">
+                      {item.descripcion}
+                    </p>
                   </div>
                 </div>
               </Link>
@@ -137,18 +138,18 @@ const Menu = () => {
         </ul>
         <div className="flex px-2 flex-col text-center items-center justify-center py-20 bebas-neue-regular">
           <h1 className="text-2xl md:text-4xl">
-            Estamos abiertos de lunes a viernes, de{" "}
-            <span className="text-orange-300"> 7:00 pm</span> a{" "}
-            <span className="text-orange-300"> 9:00 pm</span>
+            Estamos abiertos de lunes a sabado  de{" "}
+            <span className="text-orange-400"> 8:00 am</span> a{" "}
+            <span className="text-orange-400"> 10:00 pm</span>
           </h1>
           <Link
-            href="/allproducts"
+            href="/menucarta.webp"
             className="mt-6 text-lg md:text-xl px-8 py-3 flex justify-center items-center bg-slate-800 text-white rounded-lg shadow-lg hover:bg-yellow-600 transition duration-300"
             aria-label="Comprar ahora"
-          >
+            target="_blank"
+>
             ver todo el menú
           </Link>
-         
         </div>
       </div>
     </>
