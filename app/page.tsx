@@ -1,6 +1,5 @@
 import Comida from "@/components/comida";
 import HomeBanner from "@/components/home";
-import ImageCarousel from "@/components/ImageSlider";
 import Menu from "@/components/menu";
 
 
@@ -11,7 +10,7 @@ export default function Home() {
       <HomeBanner />
       <Comida />
       <Menu />
-     <ImageCarousel />
+     {/* <ImageCarousel /> */}
       {/* <CarouselTextBanner/> */}
       {/* <FeacturedProducts />
       <BannerDiscount />

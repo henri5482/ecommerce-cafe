@@ -1,14 +1,10 @@
-"use client";
-
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
-import Preload from "@/components/preload";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/toaster";
 import "@fontsource/bebas-neue";
 import { Urbanist } from "next/font/google";
 import NextTopLoader from "nextjs-toploader";
-import { useEffect, useState } from "react";
 import "./globals.css";
 
 const urbanist = Urbanist({ subsets: ["latin"] });
@@ -18,36 +14,41 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <html lang="es">
       <head>
+        <meta charSet="UTF-8" />
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Restaurante LUROMY | Menus en Huamanga y Aeropuerto Ayacucho</title>
+        <meta name="author" content="Restaurante LUROMY" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <title>Restaurante LUROMY | Menús en Huamanga y Aeropuerto Ayacucho</title>
         <meta
           name="description"
-          content="Restaurante LUROMY ofrece las mejores  menús en Huamanga, Ayacucho. Visítanos cerca del Aeropuerto Nacional Alfredo Mendívil Duarte."
+          content="Restaurante LUROMY ofrece los mejores menús en Huamanga, Ayacucho. Visítanos cerca del Aeropuerto Nacional Alfredo Mendívil Duarte."
         />
-        <meta name="keywords" content="Restaurante LUROMY, Huamanga, Ayacucho, menus, Aeropuerto Nacional Alfredo Mendívil Duarte" />
+        <meta name="keywords" content="Restaurante LUROMY, Huamanga, Ayacucho, menús, Aeropuerto Nacional Alfredo Mendívil Duarte" />
         <link rel="icon" href="/favicon.ico" />
-
+        <meta name="theme-color" content="#ffffff" />
+        <link rel="canonical" href="https://luromy.vercel.app/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Restaurante LUROMY | Menús en Huamanga y Aeropuerto Ayacucho" />
+        <meta
+          property="og:description"
+          content="Disfruta de los mejores menús en Huamanga, Ayacucho. Visítanos cerca del Aeropuerto Nacional Alfredo Mendívil Duarte."
+        />
+        <meta property="og:url" content="https://luromy.vercel.app/" />
+        <meta property="og:image" content="https://luromy.vercel.app/promo.webp" />
+        <meta property="og:locale" content="es_PE" />
+        
+        {/* Estructura de Datos (Schema Markup) para el Restaurante */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Restaurant",
-              name: "Restaurante LUROMY | Menus",
+              name: "Restaurante LUROMY | Menús",
               url: "https://luromy.vercel.app/",
               logo: "https://luromy.vercel.app/favicon.ico",
               address: {
@@ -65,9 +66,9 @@ export default function RootLayout({
               },
               sameAs: [
                 "https://wa.me/51918237837",
-                "https://www.facebook.com/tu-pagina",
-                "https://www.instagram.com/tu-pagina",
-                "https://twitter.com/tu-pagina"
+                "https://www.facebook.com/profile.php?id=100085413237919",
+                "https://www.instagram.com/luromymenus",
+                "https://twitter.com/tu-pagina",
               ],
             }),
           }}
@@ -91,16 +92,10 @@ export default function RootLayout({
             speed={200}
             shadow="0 0 10px #2299DD,0 0 5px #2299DD"
           />
-          {loading ? (
-            <Preload />
-          ) : (
-            <>
-              <Navbar />
-              {children}
-              <Toaster />
-              <Footer />
-            </>
-          )}
+          <Navbar />
+          {children}
+          <Toaster />
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

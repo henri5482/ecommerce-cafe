@@ -14,7 +14,7 @@ import Link from "next/link";
 const Promo = () => {
   const Promos = [
     {
-      image: "promo1.webp",
+      image: "promo.webp",
       title: "¡Combo Broaster! Pollo Crocante + Gaseosa Personal",
       description: "",
     },
