@@ -28,6 +28,7 @@ export default function RootLayout({
           name="description"
           content="Restaurante LUROMY ofrece los mejores menús en Huamanga, Ayacucho. Visítanos cerca del Aeropuerto Nacional Alfredo Mendívil Duarte."
         />
+        <meta name="google-site-verification" content="s7rwNtOiZLTsTJkm10Dj-B1CNfnpkSjX7iDkXcjEVF4" />
         <meta name="keywords" content="Restaurante LUROMY, Huamanga, Ayacucho, menús, Aeropuerto Nacional Alfredo Mendívil Duarte" />
         <link rel="icon" href="/favicon.ico" />
         <meta name="theme-color" content="#ffffff" />
